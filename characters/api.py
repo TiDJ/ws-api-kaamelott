@@ -5,8 +5,9 @@ from characters.models import *
 from tastypie import fields
 from tastypie.resources import ALL_WITH_RELATIONS
 from tastypie.authorization import Authorization
+from cors_resource import *
 
-class CharacterResource(ModelResource):
+class CharacterResource(CORSModelResource):
 	class Meta:
 		queryset = Character.objects.all()
 		resource_name = 'Character'

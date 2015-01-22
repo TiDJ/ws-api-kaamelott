@@ -7,8 +7,10 @@ from actors.models import *
 from tastypie import fields
 from tastypie.resources import ALL_WITH_RELATIONS
 from tastypie.authorization import Authorization
+from cors_resource import *
 
-class ActorResource(ModelResource):
+class ActorResource(CORSModelResource):
+#class ActorResource(ModelResource):
 	character = fields.ToOneField(CharacterResource, 'character', blank=True, null=True, full=True)
 	class Meta:
 		queryset = Actor.objects.all()

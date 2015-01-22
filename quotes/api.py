@@ -7,8 +7,9 @@ from characters.api import *
 from tastypie import fields
 from tastypie.resources import ALL_WITH_RELATIONS
 from tastypie.authorization import Authorization
+from cors_resource import *
 
-class QuoteResource(ModelResource):
+class QuoteResource(CORSModelResource):
     character = fields.ForeignKey(CharacterResource, 'character', blank=True, null=True, full=True)
     class Meta:
         queryset = Quote.objects.all()
