@@ -3,7 +3,8 @@ from django.contrib.auth.models import User
 from django.contrib import admin
 from django.db.models.signals import post_save
 from actors.models import *
-# Create your models here.
+
+# Character model
 
 class Character(models.Model):
 

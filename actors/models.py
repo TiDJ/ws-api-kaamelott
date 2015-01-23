@@ -4,7 +4,7 @@ from django.contrib import admin
 from django.db.models.signals import post_save
 from characters.models import *
 
-# Create your models here.
+# Actor model
 
 class Actor(models.Model):
 
